@@ -19,55 +19,70 @@
   --color-ring: var(--ring);
   --color-border: var(--border);
   --color-input: var(--input);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-tooltip-bg: var(--tooltip-bg);
+  --color-tooltip-foreground: var(--tooltip-foreground);
 }
 
 :root {
   --radius: 0.625rem;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.99 0.015 270);
+  --foreground: oklch(0.18 0.04 270);
 
-  --primary: #0046ff;
+  --primary: #471396;
   --primary-foreground: #ffffff;
 
-  --secondary: #e6eeff;
-  --secondary-foreground: #0033cc;
+  --secondary: #ede8ff;
+  --secondary-foreground: #3b0f7d;
 
-  --accent: #3366ff;
+  --accent: #5b4bff;
   --accent-foreground: #ffffff;
 
-  --muted: #d5dae9;
-  --muted-foreground: #5c6ac4;
+  --muted: #f2f3fa;
+  --muted-foreground: #5f4b9a;
 
-  --destructive: #ff4d4f;
+  --destructive: #e63946;
+  --destructive-foreground: #ffffff;
 
-  --border: #dce3ff;
-  --input: #dce3ff;
+  --border: #e1e4f5;
+  --input: #dfe3fa;
+  --ring: #6c3bff;
 
-  --ring: #0046ff;
+  --card: #ffffff;
+  --card-foreground: #0f1724;
+  --tooltip-bg: rgba(15, 23, 36, 0.9);
+  --tooltip-foreground: #f4f3ff;
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --primary: #0046ff;
+  --background: #020619;
+  --foreground: oklch(0.98 0.005 260);
+
+  --primary: #471396;
   --primary-foreground: #ffffff;
 
-  --secondary: #1a2b6c;
-  --secondary-foreground: #cdd9ff;
+  --secondary: #2e0a6f;
+  --secondary-foreground: #d9c7ff;
 
-  --accent: #336dff;
+  --accent: #6d3eff;
   --accent-foreground: #ffffff;
 
-  --muted: #192238;
-  --muted-foreground: #8fa2ff;
+  --muted: #1a1530;
+  --muted-foreground: #9a8cff;
 
-  --destructive: #ff5a5f;
+  --destructive: #ff4d6d;
 
-  --border: #283458;
-  --input: #2a3762;
+  --border: #2b2153;
+  --input: #31245d;
+  --ring: #7b3cff;
 
-  --ring: #0046ff;
+  --card: oklch(0.13 0.035 265);
+  --card-foreground: oklch(0.98 0.005 255);
+  --tooltip-bg: rgba(71, 19, 150, 0.15);
+  --tooltip-foreground: #e8dcff;
 }
 
 @layer base {
@@ -79,10 +94,37 @@
   }
 }
 
-::-webkit-scrollbar{
+@layer utilities {
+  .font-jakarta {
+    font-family: var(--font-jakarta), sans-serif;
+  }
+
+  .font-anton {
+    font-family: var(--font-anton), sans-serif;
+  }
+
+  .font-roboto-slab {
+    font-family: var(--font-roboto-slab), serif;
+  }
+}
+
+::-webkit-scrollbar {
   display: none;
 }
 
-body{
+body {
   overflow-x: hidden;
+}
+
+.hero-image {
+  background-image: url('/images/image.png');
+  background-size: cover ;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-skills {
+  background-image: url('/images/wutwut.jpeg');
+  background-size: cover ;
+  background-position: center;
+  background-repeat: no-repeat;
 }
