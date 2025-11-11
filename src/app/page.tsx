@@ -7,6 +7,9 @@ import GetInTouch from "./_sections/get-in-touch";
 import ShowcasePage from "./_sections/showcase-project";
 import QuoteLine from "@/components/fragments/quote-line";
 import Footer from "./_sections/footer";
+import Stacks from "./_sections/stacks";
+import BootcampTrainingJourney from "./_sections/bootcamp";
+import CertificatesSection from "./_sections/certificate";
 
 const page = () => {
   return (
@@ -14,7 +17,10 @@ const page = () => {
       <Navbar />
       <HeroPage />
       <Journey />
+      <BootcampTrainingJourney />
       <Skills />
+      <Stacks />
+      <CertificatesSection />
       <ShowcasePage />
       <QuoteLine />
       <GetInTouch />

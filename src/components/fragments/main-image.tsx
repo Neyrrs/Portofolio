@@ -12,7 +12,6 @@ const MainImage = () => {
     const container = containerRef.current;
     if (!span || !container) return;
 
-    // Animasi masuk (ketika hover)
     const hoverIn = () => {
       gsap.to(span, {
         rotation: 0,
@@ -23,7 +22,6 @@ const MainImage = () => {
       });
     };
 
-    // Animasi keluar (ketika mouse lepas)
     const hoverOut = () => {
       gsap.to(span, {
         rotation: -8,
@@ -47,15 +45,15 @@ const MainImage = () => {
     <div ref={containerRef} className="relative inline-block cursor-target">
       <Image
         alt="main-image"
-        src={"/images/me.jpg"}
+        src={"/images/me2.png"}
         width={800}
         height={450}
         quality={100}
-        className="w-110 h-104 object-cover hover:shadow-2xl hover:scale-102 hover:rounded-md duration-300 transition-all"
+        className="w-110 h-104 object-cover shadow-md hover:shadow-2xl hover:scale-102 rounded-full duration-300 transition-all"
       />
       <span
         ref={spanRef}
-        className="absolute w-fit py-3 px-8 h-fit text-white font-semibold border-2 rounded-xs border-black shadow-sm -rotate-6 flex items-center justify-center text-4xl -bottom-10 bg-primary -right-10"
+        className="absolute w-fit py-3 px-8 h-fit text-white font-semibold border-2 rounded-xs border-black shadow-sm -rotate-6 flex items-center justify-center text-4xl -bottom-5 bg-primary right-0"
       >
         Ezwan Ibnu Y.
       </span>

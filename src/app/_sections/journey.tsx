@@ -52,7 +52,7 @@ const Journey = () => {
       ref={sectionRef}
       className="relative max-h-screen w-full bg-secondary text-foreground pt-20 pb-4 px-6 md:px-16"
     >
-      <div className="mb-16 cursor-target text-left absolute -top-15 -left-10 rotate-2 border-black border-2 py-4 px-10 bg-white text-primary hover:-rotate-2 transition-all duration-300 ">
+      <div className="mb-16 cursor-target text-left absolute -top-15 -left-6 rotate-2 border-black border-2 py-4 px-10 bg-white text-primary hover:-rotate-2 transition-all duration-300 ">
         <h2 className="text-4xl md:text-5xl font-bold">
           Education Journey
         </h2>

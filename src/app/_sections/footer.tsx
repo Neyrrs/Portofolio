@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <Container>
-      <div className="h-50 bg-card overflow-hidden relative">
+      <div className="h-50 overflow-hidden relative">
         <h1 className="text-9xl -bottom-10 font-bold w-full font-roboto-slab absolute left-1/2 -translate-x-1/2">
           Ezwan dev
         </h1>
