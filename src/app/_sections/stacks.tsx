@@ -38,7 +38,7 @@ function LogoTile({ s }: { s: Skill }) {
     <motion.div
       layout
       transition={spring}
-      className="relative isolate cursor-target flex aspect-square items-center justify-center rounded-2xl border bg-card/80 p-6 shadow-sm backdrop-blur-sm hover:shadow-md"
+      className="relative isolate cursor-target flex aspect-square items-center justify-center rounded-2xl border bg-card/80 p-5 shadow-sm backdrop-blur-sm hover:shadow-md h-32 lg:h-32"
       whileHover={{ y: -2 }}
     >
       {logoSrc ? (
@@ -47,14 +47,14 @@ function LogoTile({ s }: { s: Skill }) {
           alt={title}
           width={96}
           height={96}
-          className="object-contain max-h-24"
+          className="object-contain max-h-15"
         />
       ) : (
         <span className="text-2xl font-semibold tracking-wider opacity-80">
           {initials}
         </span>
       )}
-      <span className="pointer-events-none absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-muted-foreground/80">
+      <span className="pointer-events-none w-full text-center absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-muted-foreground/80">
         {title}
       </span>
     </motion.div>
@@ -90,7 +90,7 @@ export default function StacksShowcase() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
-      className="grid gap-4 grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"
+      className="grid gap-4 grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-8"
     >
       {items.map((s, i) => (
         <motion.div key={`${s.name}-${i}`} variants={item}>
@@ -100,10 +100,10 @@ export default function StacksShowcase() {
     </motion.div>
   );
 
-  const title = tab === "primary" ? "Tech Stack" : "Other / Additional Skills";
+  const title = tab === "primary" ? "Tech Stack" : "Additional Skills";
   const subtitle =
     tab === "primary"
-      ? "Grid logo besar yang layak jadi section sendiri. Tidak ada badge kecil."
+      ? "Skill utama yang membantuku dalam pengembangan aplikasi."
       : "Skill pendukung untuk delivery dan kolaborasi.";
 
   const items = tab === "primary" ? primary : secondary;

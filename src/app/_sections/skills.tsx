@@ -51,28 +51,28 @@ const Skills: React.FC = () => {
             Keahlian yang aku kuasai dan terus aku kembangkan.
           </p>
         </div>
-        <div className="grid w-full gap-6 lg:grid-cols-2 items-stretch">
+        <div className="flex w-full gap-5 items-center justify-center h-full">
           <Card
             ref={leftCardRef}
-            className="bg-primary text-white shadow-2xl shadow-white/10 p-6 rounded-lg
-               flex flex-col justify-between self-stretch
+            className="bg-primary text-white shadow-2xl md:w-1/2 w-full shadow-white/10 p-6 rounded-lg
+               flex flex-col justify-between
                h-90"
           >
             <p className="text-5xl font-bold">Experience over 2+ years</p>
-            <p className="mt-4 text-4xl font-extrabold">
+            <p className="mt-4 text-5xl font-extrabold">
               10+ Projects Completed
             </p>
           </Card>
 
-          <div className="grid grid-rows-[auto_1fr] gap-6 self-stretch h-full">
+          <div className="md:w-1/2 w-full gap-6 h-fit">
             <div ref={rightTextRef} className="flex flex-col">
-              <h3 className="text-4xl font-bold">
+              <h3 className="text-5xl font-bold">
                 Mastering <span className="text-yellow-500">{"{ "}</span>
                 Javascript
                 <span className="text-yellow-500">{" }"}</span> as Mother
                 Language
               </h3>
-              <p className="text-base text-foreground/80 mt-4">
+              <p className="text-lg text-foreground/80 mt-4">
                 Fokus pada frontend & backend development menggunakan
                 JavaScript, TypeScript, React, Node.js, dan teknologi modern
                 lainnya. Selalu belajar dan menerapkan best practices untuk

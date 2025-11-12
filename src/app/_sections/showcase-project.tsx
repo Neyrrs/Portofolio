@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "@/components/wrappers/container";
-import { Github, MousePointer2 } from "lucide-react";
+import { Github, MousePointer2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { projects } from "@/data/showcase";
 
@@ -76,15 +76,17 @@ export default function ShowcaseSection() {
             dalam pengembangan web modern.
           </motion.p>
         </div>
+
         <div className="container mx-auto space-y-28">
           {projects.map((project, index) => {
             const isLeft = index % 2 === 0;
+            const hasPreview = Boolean(project.preview && project.preview.trim());
+            const hasGithub = Boolean(project.github && project.github.trim());
+
             return (
               <div
                 key={project.id}
-                className={`showcase-item flex flex-col md:flex-row items-center gap-10 ${
-                  isLeft ? "" : "md:flex-row-reverse"
-                }`}
+                className={`showcase-item flex flex-col md:flex-row items-center gap-10 ${isLeft ? "" : "md:flex-row-reverse"}`}
               >
                 <motion.div
                   whileHover={{ scale: 1.03 }}
@@ -97,9 +99,11 @@ export default function ShowcaseSection() {
                     width={500}
                     height={500}
                     className="w-full h-full object-cover"
+                    priority={index < 2}
                   />
                 </motion.div>
-                <div className={`w-full md:w-1/2`}>
+
+                <div className="w-full md:w-1/2">
                   <h3 className="text-4xl font-bold text-foreground mb-2">
                     {project.title}
                   </h3>
@@ -107,38 +111,70 @@ export default function ShowcaseSection() {
                     {project.description}
                   </p>
 
-                  <div className={`flex flex-wrap gap-2 mb-5`}>
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {project.stack.map((tech, i) => (
                       <Badge key={i} variant="secondary">
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                  <div className={"text-left flex items-center text-sm gap-2"}>
-                    <Button asChild className="cursor-target cursor-none">
-                      <Link
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+
+                  <div className="text-left flex items-center text-sm gap-2">
+                    {/* Preview button */}
+                    {hasPreview ? (
+                      <Button asChild className="cursor-target cursor-none">
+                        <Link
+                          href={project.preview}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Lihat Preview
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button disabled variant="secondary" className="opacity-70">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Preview belum tersedia
+                      </Button>
+                    )}
+
+                    {/* GitHub button */}
+                    {hasGithub ? (
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="icon"
+                        className="cursor-target cursor-none"
+                        aria-label="Buka repository di GitHub"
+                        title="Buka repository di GitHub"
                       >
-                        Lihat Proyek
-                      </Link>
-                    </Button>
-                    <Button
-                      asChild
-                      variant={"outline"}
-                      size={"icon"}
-                      className="cursor-target cursor-none"
-                    >
-                      <Link
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-4 w-4" />
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        disabled
+                        className="opacity-70"
+                        aria-label="Repository belum tersedia"
+                        title="Repository belum tersedia"
                       >
-                        <Github />
-                      </Link>
-                    </Button>
+                        <Github className="h-4 w-4" />
+                      </Button>
+                    )}
                   </div>
+
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    {hasPreview ? "Preview aktif" : "Website belum bisa diakses"}
+                    {hasGithub ? " • Repository tersedia" : " • Repository tidak tersedia"}
+                  </p>
                 </div>
               </div>
             );

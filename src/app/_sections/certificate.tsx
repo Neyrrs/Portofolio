@@ -22,52 +22,28 @@ export type Certificate = {
 
 const certificates: Certificate[] = [
   {
-    id: "cert-react",
-    title: "React Developer Certificate",
-    issuer: "Meta",
-    date: "2024-03-10",
-    image: "/certificates/react-cert.png",
-    logo: "/logos/meta.png",
+    id: "telkom-digi",
+    title: "BNSP UI/UX junior",
+    issuer: "Telkom Digiup",
+    date: "2025-05-2",
+    image: "/certificates/bnsp-uiux.png",
+    logo: "/icons/telkomdigiup.png",
   },
   {
-    id: "cert-next",
-    title: "Next.js Mastery",
-    issuer: "Vercel",
-    date: "2024-02-02",
-    image: "/certificates/next-cert.png",
-    logo: "/logos/vercel.png",
+    id: "idn",
+    title: "Junior Programmer",
+    issuer: "IDN",
+    date: "2023-11-12",
+    image: "/certificates/idn.jpeg",
+    logo: "/icons/idn.png",
   },
   {
-    id: "cert-node",
-    title: "Node.js Backend Fundamentals",
-    issuer: "Udemy",
-    date: "2023-09-18",
-    image: "/certificates/node-cert.png",
-    logo: "/logos/udemy.png",
-  },
-  {
-    id: "cert-design",
-    title: "UI/UX for Developers",
-    issuer: "Google",
-    date: "2023-08-02",
-    image: "/certificates/uiux-cert.png",
-    logo: "/logos/google.png",
-  },
-  {
-    id: "cert-ts",
-    title: "TypeScript Professional",
-    issuer: "Microsoft",
-    date: "2023-07-01",
-    image: "/certificates/ts-cert.png",
-    logo: "/logos/microsoft.png",
-  },
-  {
-    id: "cert-css",
-    title: "Advanced CSS Layouts",
-    issuer: "Frontend Masters",
-    date: "2023-06-21",
-    image: "/certificates/css-cert.png",
-    logo: "/logos/frontendmasters.png",
+    id: "clevio",
+    title: "Clevio game Development",
+    issuer: "Clevio",
+    date: "2025-06-18",
+    image: "/certificates/clevio.png",
+    logo: "/icons/clevio.png",
   },
 ];
 
@@ -84,7 +60,7 @@ const item = {
 function CertificateCard({ c }: { c: Certificate }) {
   return (
     <motion.div layout variants={item} transition={spring}>
-      <Card className="overflow-hidden rounded-lg border bg-card/80 backdrop-blur-sm shadow-md">
+      <Card className="overflow-hidden rounded-lg border bg-card/80 p-0 backdrop-blur-sm shadow-md">
         <div className="relative aspect-video w-full overflow-hidden">
           <Image
             src={c.image}

@@ -5,16 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  Calendar,
-  MapPin,
-  Clock,
-  Code2,
-  GraduationCap,
-  BadgeCheck,
-} from "lucide-react";
+import { Calendar, MapPin, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 if (typeof window !== "undefined") {
@@ -39,48 +31,40 @@ const trainings: Training[] = [
   {
     id: "digiup-2024",
     year: "2024",
-    title: "Digiup Telkom Fullstack",
+    title: "Telkom Digiup UI/UX",
     org: "Telkom",
-    duration: "12 weeks",
+    duration: "5 weeks",
     location: "Online",
-    tags: ["React", "Next.js", "Express", "MongoDB"],
-    logo: "/logos/telkom.png",
-    highlight: "Project end-to-end: auth, dashboard, API, deploy.",
-    description:
-      "Program intensif membangun aplikasi fullstack: perancangan arsitektur, implementasi REST API, autentikasi JWT, dan deployment.",
+    tags: ["Figma"],
+    logo: "/icons/telkomdigiup.png",
+    highlight: "Project end-to-end: client reset, wireframe, prototyping.",
     category: "bootcamp",
   },
   {
-    id: "clevio-2023",
-    year: "2023",
-    title: "Front-end Fundamentals",
+    id: "clevio-2025",
+    year: "2025",
+    title: "Games Development",
     org: "Clevio",
-    duration: "6 weeks",
-    tags: ["HTML", "CSS", "JavaScript"],
-    logo: "/logos/clevio.png",
-    highlight: "Dasar kuat UI dan interaksi DOM.",
-    description:
-      "Fondasi front-end: semantic HTML, layout modern, aksesibilitas dasar, dan praktik JavaScript yang rapi.",
+    duration: "12 weeks",
+    tags: ["React", "Tailwind", "GSAP"],
+    logo: "/icons/clevio.png",
+    highlight: "Game development using AI for special needs child.",
     category: "bootcamp",
   },
   {
-    id: "algo-2024",
+    id: "idn-2024",
     year: "2024",
-    title: "Algorithms for Web Devs",
-    org: "Self-paced Course",
-    duration: "15 hours",
-    tags: ["DSA", "Big-O", "Patterns"],
-    category: "course",
-    highlight: "Problem solving yang relevan buat produk, bukan lomba.",
+    title: "Kelas Programmer",
+    org: "IDN",
+    duration: "1 week",
+    tags: ["HTML", "Boostrap", "CSS"],
+    logo: "/icons/idn.png",
+    highlight: "Focus on basic website development using HTML and boostrap.",
+    category: "bootcamp",
   },
 ];
 
-const spring = {
-  type: "spring",
-  stiffness: 160,
-  damping: 22,
-  mass: 0.7,
-} as const;
+const spring = { type: "spring", stiffness: 160, damping: 22, mass: 0.7 } as const;
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -97,9 +81,7 @@ function useProgressRail(ref: React.RefObject<HTMLDivElement | null>) {
     const scopeEl = ref.current;
     if (!scopeEl) return;
 
-    const rail = scopeEl.querySelector(
-      ".rail-progress"
-    ) as HTMLDivElement | null;
+    const rail = scopeEl.querySelector(".rail-progress") as HTMLDivElement | null;
     if (!rail) return;
 
     const ctx = gsap.context(() => {
@@ -109,12 +91,7 @@ function useProgressRail(ref: React.RefObject<HTMLDivElement | null>) {
         {
           scaleY: 1,
           ease: "none",
-          scrollTrigger: {
-            trigger: scopeEl,
-            start: "top 10%",
-            end: "bottom 80%",
-            scrub: true,
-          },
+          scrollTrigger: { trigger: scopeEl, start: "top 10%", end: "bottom 80%", scrub: true },
         }
       );
     }, scopeEl);
@@ -123,53 +100,15 @@ function useProgressRail(ref: React.RefObject<HTMLDivElement | null>) {
   }, [ref]);
 }
 
-function Segmented({
-  value,
-  onChange,
-}: {
-  value: "all" | "bootcamp" | "course";
-  onChange: (v: "all" | "bootcamp" | "course") => void;
-}) {
-  const options = [
-    { id: "all", label: "All", icon: GraduationCap },
-    { id: "bootcamp", label: "Bootcamps", icon: Code2 },
-    { id: "course", label: "Courses", icon: BadgeCheck },
-  ] as const;
-
-  return (
-    <div className="inline-flex items-center gap-2 rounded-2xl border bg-background/70 p-1 shadow-sm">
-      {options.map(({ id, label, icon: Icon }) => (
-        <Button
-          key={id}
-          type="button"
-          size="sm"
-          variant={value === id ? "default" : "ghost"}
-          onClick={() => onChange(id)}
-          className="gap-2 rounded-xl"
-          aria-pressed={value === id}
-        >
-          <Icon className="h-4 w-4" /> {label}
-        </Button>
-      ))}
-    </div>
-  );
-}
-
 function TrainingCard({ t }: { t: Training }) {
   return (
-    <motion.div layout variants={itemVariants} transition={spring}>
+    <motion.div layout variants={itemVariants} className="cursor-target hover:scale-104 transition-all duration-300" transition={spring}>
       <Card className="relative overflow-hidden rounded-2xl border bg-card/80 backdrop-blur-sm shadow-sm">
-        <CardHeader className="pb-2">
+        <CardHeader className="pb-2 gap-1">
           <CardTitle className="flex items-center gap-3 text-lg">
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border bg-muted/40">
               {t.logo ? (
-                <Image
-                  src={t.logo}
-                  alt={t.org}
-                  width={20}
-                  height={20}
-                  className="object-contain"
-                />
+                <Image src={t.logo} alt={t.org} width={30} height={30} className="object-contain" />
               ) : (
                 <span className="text-[10px] font-semibold opacity-70">
                   {t.org?.slice(0, 3)?.toUpperCase() || "ORG"}
@@ -181,9 +120,7 @@ function TrainingCard({ t }: { t: Training }) {
         </CardHeader>
         <CardContent className="pt-0 space-y-3">
           {t.highlight && (
-            <p className="text-sm text-foreground/80 leading-relaxed">
-              {t.highlight}
-            </p>
+            <p className="text-sm text-foreground/80 leading-relaxed">{t.highlight}</p>
           )}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
             {t.year && (
@@ -216,9 +153,7 @@ function TrainingCard({ t }: { t: Training }) {
             </div>
           )}
           {t.description && (
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t.description}
-            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">{t.description}</p>
           )}
         </CardContent>
         <div className="absolute inset-x-0 -bottom-px h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -228,31 +163,21 @@ function TrainingCard({ t }: { t: Training }) {
 }
 
 export default function BootcampTrainingJourney() {
-  const [filter, setFilter] = React.useState<"all" | "bootcamp" | "course">(
-    "all"
-  );
+  const bootcamps = trainings.filter((t) => t.category === "bootcamp");
 
   const railRef = React.useRef<HTMLDivElement | null>(null);
   useProgressRail(railRef);
 
-  const visible = trainings.filter((t) =>
-    filter === "all" ? true : t.category === filter
-  );
-
   return (
     <section className="relative w-full bg-secondary text-foreground py-12">
       <div className="px-6 md:px-16">
-        <div className="mb-8 flex items-end justify-between gap-4 flex-wrap">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Bootcamp & Training Journey
-            </h2>
-            <p className="text-sm md:text-base text-muted-foreground mt-2">
-              Rekap perjalanan pelatihan yang relevan buat kerjaan nyata, bukan
-              sekadar checklist.
-            </p>
-          </div>
-          <Segmented value={filter} onChange={setFilter} />
+        <div className="mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Bootcamp & Training Journey
+          </h2>
+          <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl">
+            Rekap perjalanan pelatihan yang relevan buat kerjaan nyata, bukan sekadar checklist.
+          </p>
         </div>
 
         <div ref={railRef} className="relative">
@@ -270,7 +195,7 @@ export default function BootcampTrainingJourney() {
             viewport={{ once: true, margin: "-100px" }}
             className="grid gap-5 md:pl-8 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {visible.map((t) => (
+            {bootcamps.map((t) => (
               <TrainingCard key={t.id} t={t} />
             ))}
           </motion.div>
