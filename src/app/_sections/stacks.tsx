@@ -38,7 +38,7 @@ function LogoTile({ s }: { s: Skill }) {
     <motion.div
       layout
       transition={spring}
-      className="relative isolate cursor-target flex aspect-square items-center justify-center rounded-2xl border bg-card/80 p-5 shadow-sm backdrop-blur-sm hover:shadow-md h-32 lg:h-32"
+      className="relative isolate cursor-target flex aspect-square items-center justify-center rounded-md md:rounded-2xl border bg-card/80 p-1 md:p-5 shadow-sm backdrop-blur-sm hover:shadow-md h-25 md:h-32 lg:h-32"
       whileHover={{ y: -2 }}
     >
       {logoSrc ? (
@@ -47,7 +47,7 @@ function LogoTile({ s }: { s: Skill }) {
           alt={title}
           width={96}
           height={96}
-          className="object-contain max-h-15"
+          className="object-contain md:max-h-15 max-h-10"
         />
       ) : (
         <span className="text-2xl font-semibold tracking-wider opacity-80">
@@ -110,13 +110,13 @@ export default function StacksShowcase() {
 
   return (
     <Container>
-      <div className="w-full max-h-screen relative py-10">
+      <div className="w-full max-h-screen relative my-25 md:my-10">
         <div className="mb-8 flex items-end justify-between gap-4 flex-wrap">
-          <div>
-            <h2 className="text-6xl  font-bold tracking-tight">{title}</h2>
+          <div className="flex flex-col gap-2">
+            <h2 className="text-4xl md:text-6xl  font-bold tracking-tight">{title}</h2>
             <p className="text-base text-muted-foreground">{subtitle}</p>
           </div>
-          <Crown className="absolute -top-0 size-20 text-primary rotate-10 -right-6" />
+          <Crown className="absolute -top-10 md:top-0 size-15 md:size-20 text-primary rotate-10 md:-right-6 -right-1" />
 
           <button
             type="button"

@@ -59,9 +59,12 @@ const Journey = () => {
       ref={sectionRef}
       className="relative max-h-screen w-full bg-secondary text-foreground pt-20 pb-4 px-6 md:px-16"
     >
-      <div className="mb-16 cursor-target text-left absolute -top-15 -left-6 rotate-2 border-black border-2 py-4 px-10 bg-white text-primary hover:-rotate-2 transition-all duration-300 ">
-        <h2 className="text-4xl md:text-5xl font-bold">Education Journey</h2>
-        <p className="text-primary mt-3 text-sm md:text-base">
+      <div
+        id="journey"
+        className="mb-16 cursor-target text-left absolute -top-15 -left-6 md:rotate-2 border-black border-2 py-4 px-10 bg-white text-primary hover:-rotate-2 transition-all duration-300 "
+      >
+        <h2 className="text-2xl md:text-5xl font-bold">Education Journey</h2>
+        <p className="text-primary mt-2 md:mt-3 text-sm md:text-base">
           Jejak perjalanan pendidikan yang membentuk dasar dan karakter saya.
         </p>
       </div>
@@ -69,9 +72,9 @@ const Journey = () => {
         {education.map((item, index) => (
           <div
             key={index}
-            className="timeline-item relative pl-10 mb-12 last:mb-0"
+            className="timeline-item relative pl-10 mb-4 md:mb-12 last:mb-0"
           >
-            <div className="absolute -left-[26px] flex items-center justify-center max-w-10 max-h-10 rounded-full bg-white text-primary-foreground shadow-md">
+            <div className="absolute -left-[26px] flex items-center justify-center max-w-10 max-h-10 rounded-full bg- text-primary-foreground shadow-md">
               <Image
                 width={50}
                 height={50}
@@ -79,14 +82,14 @@ const Journey = () => {
                 src={item.logo}
               />
             </div>
-            <span className="text-xs md:text-sm text-muted-foreground font-medium tracking-wide">
+            <span className="text-xs md:text-sm text-muted-foreground font-extrabold tracking-wide">
               {item.year}
             </span>
-            <h3 className="text-lg md:text-xl font-semibold mt-1 text-foreground">
+            <h3 className="text-lg md:text-xl font-extrabold mt-1 text-foreground">
               {item.title}
             </h3>
 
-            <p className="text-sm md:text-sm w-[80%] mt-2 text-foreground/80 leading-relaxed">
+            <p className="text-sm md:text-sm md:w-[80%] mt-2 text-foreground/80 font-medium leading-relaxed">
               {item.description}
             </p>
           </div>

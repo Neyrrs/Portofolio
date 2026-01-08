@@ -50,7 +50,7 @@ export default function ShowcaseSection() {
       >
         <div className="text-left mb-16 relative overflow-hidden">
           <motion.h2
-            className="relative inline-block text-7xl font-bold mb-0"
+            className="relative inline-block text-3xl md:text-7xl font-bold mb-0"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -58,8 +58,8 @@ export default function ShowcaseSection() {
             <span className="text-yellow-500">{"{ "}</span>
             Project Showcase
             <span className="text-yellow-500">{" }"}</span>
-            <span className="absolute -bottom-13 right-5  flex flex-col gap-1">
-              <MousePointer2 className="text-blue-500 size-10" />
+            <span className="absolute md:-bottom-13 -bottom-8 -right-6 md:right-5  flex flex-col gap-1">
+              <MousePointer2 className="text-blue-500 size-6 md:size-10" />
               <span className="px-2 py-0.5 text-white bg-blue-500 text-xs rounded-md font-semibold">
                 Ezwan
               </span>
@@ -77,7 +77,7 @@ export default function ShowcaseSection() {
           </motion.p>
         </div>
 
-        <div className="container mx-auto space-y-28">
+        <div className="container mx-auto md:space-y-28 space-y-20">
           {projects.map((project, index) => {
             const isLeft = index % 2 === 0;
             const hasPreview = Boolean(project.preview && project.preview.trim());
@@ -104,10 +104,10 @@ export default function ShowcaseSection() {
                 </motion.div>
 
                 <div className="w-full md:w-1/2">
-                  <h3 className="text-4xl font-bold text-foreground mb-2">
+                  <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-muted-secondary mb-4 line-clamp-5">
+                  <p className="text-muted-secondary md:text-base text-sm mb-4 line-clamp-5">
                     {project.description}
                   </p>
 

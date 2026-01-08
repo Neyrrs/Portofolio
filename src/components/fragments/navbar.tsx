@@ -10,6 +10,8 @@ import {
   Sun,
   User2Icon,
   Menu,
+  ScrollText,
+  Newspaper,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import {
@@ -47,14 +49,14 @@ const Navbar = () => {
         {/* Tombol Trigger */}
         <DrawerTrigger asChild>
           <Button variant="ghost" size="icon" aria-label="Open Menu">
-            <Menu />
+            <Menu className="text-primary size-8" />
           </Button>
         </DrawerTrigger>
 
         {/* Konten Drawer */}
         <DrawerContent className="fixed top-0 right-0 h-full w-[260px] md:w-[320px] border-l border-border/40 rounded-none px-6 py-8">
           <DrawerHeader className="px-0">
-            <DrawerTitle className="text-xl font-semibold">
+            <DrawerTitle className="text-4xl font-bold">
               Navigation
             </DrawerTitle>
           </DrawerHeader>
@@ -62,31 +64,45 @@ const Navbar = () => {
           <nav className="mt-6 flex flex-col gap-2 w-full">
             <Button
               variant="ghost"
-              className="justify-start gap-3"
+              className="justify-start text-xl gap-3"
               onClick={() => handleScroll("#about")}
             >
-              <User2Icon /> About
+              <User2Icon className="size-5" /> About
             </Button>
             <Button
               variant="ghost"
-              className="justify-start gap-3"
+              className="justify-start text-xl gap-3"
+              onClick={() => handleScroll("#journey")}
+            >
+              <ScrollText className="size-5" /> Journey
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-xl gap-3"
               onClick={() => handleScroll("#skills")}
             >
-              <Pen /> Skills
+              <Pen className="size-5" /> Skills
             </Button>
             <Button
               variant="ghost"
-              className="justify-start gap-3"
+              className="justify-start text-xl gap-3"
+              onClick={() => handleScroll("#certificate")}
+            >
+              <Newspaper className="size-5" /> Certificates
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-xl gap-3"
               onClick={() => handleScroll("#projects")}
             >
-              <FolderOpen /> Projects
+              <FolderOpen className="size-5"/> Projects
             </Button>
             <Button
               variant="ghost"
-              className="justify-start gap-3"
+              className="justify-start text-xl gap-3"
               onClick={() => handleScroll("#contact")}
             >
-              <MessageCircle /> Contact
+              <MessageCircle className="size-5"/> Contact
             </Button>
           </nav>
 

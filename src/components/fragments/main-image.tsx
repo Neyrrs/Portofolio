@@ -49,11 +49,11 @@ const MainImage = () => {
         width={800}
         height={450}
         quality={100}
-        className="w-110 h-104 object-cover shadow-md hover:shadow-2xl hover:scale-102 rounded-full duration-300 transition-all"
+        className="w-110 h-104 object-cover shadow-md border-primary border-4 hover:shadow-2xl hover:scale-102 rounded-full duration-300 transition-all"
       />
       <span
         ref={spanRef}
-        className="absolute w-fit py-3 px-8 h-fit text-white font-semibold border-2 rounded-xs border-black shadow-sm -rotate-6 flex items-center justify-center text-4xl -bottom-5 bg-primary right-0"
+        className="absolute w-fit py-3 px-8 h-fit text-white font-semibold border-2 rounded-xs border-black shadow-sm -rotate-6 flex items-center justify-center text-4xl -bottom-5 bg-primary -right-5 md:right-0"
       >
         Ezwan Ibnu Y.
       </span>

@@ -172,7 +172,7 @@ export default function BootcampTrainingJourney() {
     <section className="relative w-full bg-secondary text-foreground py-12">
       <div className="px-6 md:px-16">
         <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-2xl md:text-5xl font-bold tracking-tight">
             Bootcamp & Training Journey
           </h2>
           <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl">

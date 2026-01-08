@@ -59,7 +59,7 @@ const QuoteLine = () => {
     <Container>
       <div
         ref={sectionRef}
-        className="h-screen flex justify-center items-center font-roboto-slab font-semibold text-9xl"
+        className="md:h-screen h-fit py-40 w-full md:px-0 flex justify-center items-center font-roboto-slab font-semibold text-7xl md:text-9xl"
       >
         <h1 className="quote-text">
           <span className="relative inline-block group">
@@ -68,7 +68,7 @@ const QuoteLine = () => {
               whileHover={{ rotate: -10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <Quote className="quote-icon absolute text-primary -top-8 -left-10 size-12 transform scale-x-[-1]" />
+              <Quote className="quote-icon absolute text-primary -top-10 md:-top-8 -left-5 md:-left-10 size-10 md:size-12 transform scale-x-[-1]" />
             </motion.span>
           </span>
           {" "}to the{" "}
@@ -87,7 +87,7 @@ const QuoteLine = () => {
               whileHover={{ rotate: 10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <Quote className="quote-icon absolute -bottom-8 text-primary -right-12 size-12" />
+              <Quote className="quote-icon absolute -bottom-10 md:-bottom-8 text-primary md:-right-10 -right-8 size-10 md:size-12" />
             </motion.span>
           </span>
         </h1>

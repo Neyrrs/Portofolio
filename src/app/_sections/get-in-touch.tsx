@@ -67,17 +67,18 @@ const GetInTouch: React.FC = () => {
     <Container>
       <section
         ref={sectionRef}
-        className="h-screen flex flex-col md:flex-row items-center justify-between py-10 gap-10 w-full"
+        id="contact"
+        className="h-screen flex flex-col-reverse md:flex-row items-center justify-between py-10 gap-10 w-full"
       >
         <div
           ref={headingRef}
-          className="w-full md:w-1/2 px-10 flex flex-col justify-center"
+          className="w-full md:w-1/2 md:px-10 flex flex-col justify-center"
         >
-          <h1 className="text-4xl md:text-5xl font-roboto-slab font-semibold mb-4 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-roboto-slab font-semibold mb-4 leading-tight">
             Let’s Connect <br />
             and Build Something Great!
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-md">
+          <p className="text-muted-foreground text-sm md:text-lg mb-8 max-w-md">
             Feel free to reach out to me through any platform below — whether
             it’s about collaboration, projects, or just saying hello!
           </p>
@@ -85,7 +86,7 @@ const GetInTouch: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            className="flex items-center gap-5 flex-wrap"
+            className="flex items-center gap-5  flex-wrap"
           >
             {[
               {
@@ -143,7 +144,7 @@ const GetInTouch: React.FC = () => {
             alt="Get in Touch"
             src="/images/wutwut.jpeg"
             fill
-            className="object-cover rounded-bl-xl shadow-xl"
+            className="object-cover rounded-xl md:rounded-bl-xl shadow-xl"
           />
         </motion.div>
       </section>

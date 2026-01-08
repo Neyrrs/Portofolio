@@ -115,7 +115,7 @@ export default function CertificatesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full text-foreground py-14">
+    <section ref={sectionRef} id="certificate" className="relative w-full text-foreground py-14">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center md:text-left">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight"> <span className="text-yellow-500">{"<"}</span> Certificates <span className="text-yellow-500">{"/>"}</span></h2>

@@ -42,15 +42,17 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <div className="hero-image">
-      <TargetCursor spinDuration={2} hideDefaultCursor />
+    <div id='about' className="hero-image">
+      <div className="md:block hidden">
+        <TargetCursor spinDuration={2} hideDefaultCursor />
+      </div>
       <section
         ref={heroRef}
-        className="h-screen  w-full flex flex-col md:flex-row items-center justify-between px-10 py-8 container mx-auto"
+        className="h-screen  w-full flex flex-col-reverse md:flex-row items-center justify-between px-10 py-8 container mx-auto"
       >
         <div className="flex flex-col justify-center gap-8 md:w-1/2 w-full">
-          <div className="flex flex-col gap-4">
-            <h1 className="hero-text text-5xl md:text-6xl font-bold leading-tight text-foreground">
+          <div className="flex flex-col gap-2 md:gap-4">
+            <h1 className="hero-text text-4xl md:text-6xl font-bold leading-tight text-foreground">
               Meet me, person loves to{" "}
               <span className="cursor-target px-2 transition-all text-primary hover:bg-primary hover:text-white">
                 CODE
@@ -72,7 +74,7 @@ const HeroPage = () => {
             />
           </div>
 
-          <div className="hero-text flex gap-4 mt-6">
+          <div className="hero-text flex gap-4 md:mt-6">
             <Button
               asChild
               variant="ghost"
@@ -111,7 +113,7 @@ const HeroPage = () => {
 
         <div
           ref={imageRef}
-          className="flex justify-center items-center md:w-1/2 w-full mt-10 md:mt-0"
+          className="flex justify-center py-5 items-center md:w-1/2 w-full mt-10 md:mt-0"
         >
           <MainImage />
         </div>
