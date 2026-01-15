@@ -17,7 +17,6 @@ const HeroPage = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      // Text animation
       tl.from(".hero-text", {
         opacity: 0,
         y: 60,
@@ -25,7 +24,6 @@ const HeroPage = () => {
         stagger: 0.15,
       });
 
-      // Image animation
       tl.from(
         imageRef.current,
         {
@@ -60,7 +58,7 @@ const HeroPage = () => {
             </h1>
 
             <SplitText
-              text="I'm Wan, a passionate Frontend Developer focused on building elegant, scalable web applications. love turning complex problems into clean"
+              text="I'm Wan, a passionate Frontend Developer focused on building elegant, scalable web applications. love turning complex problems into solution."
               className="hero-text text-base md:text-lg text-secondary-foreground w-[95%]"
               delay={100}
               duration={0.8}

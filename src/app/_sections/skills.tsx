@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
 
   return (
     <Container>
-      <section id='skills' className="relative w-full flex flex-col items-start py-10 md:py-24 overflow-hidden border-b-4 border-foreground">
+      <section id='skills' className="relative w-full flex flex-col items-start py-10 md:py-24 overflow-hidden md:border-none border-b-4 border-foreground">
         <div className="text-left relative mb-12 md:mb-15">
           <h2 className="text-5xl md:text-9xl font-extrabold text-primary drop-shadow-lg mb-2">
             My <span className="text-foreground">Skills</span>
@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
                md:h-90 h-fit"
           >
             <p className="text-2xl md:text-5xl font-bold">Experience over 3+ years</p>
-            <p className="mt-4 flex items-end gap-2 text-xl md:text-5xl md:font-extrabold font-semibold">
+            <p className="mt-4 flex md:flex-col md:items-start items-end gap-2 text-xl md:text-5xl md:font-extrabold font-semibold">
               <span className="font-extrabold text-2xl md:text-5xl">10+</span> Projects Completed
             </p>
           </Card>

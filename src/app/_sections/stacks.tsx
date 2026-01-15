@@ -100,7 +100,7 @@ export default function StacksShowcase() {
     </motion.div>
   );
 
-  const title = tab === "primary" ? "Tech Stack" : "Additional Skills";
+  const title = tab === "primary" ? "Stacks & Tools" : "Additional Skills";
   const subtitle =
     tab === "primary"
       ? "Skill utama yang membantuku dalam pengembangan aplikasi."
@@ -116,7 +116,7 @@ export default function StacksShowcase() {
             <h2 className="text-4xl md:text-6xl  font-bold tracking-tight">{title}</h2>
             <p className="text-base text-muted-foreground">{subtitle}</p>
           </div>
-          <Crown className="absolute -top-10 md:top-0 size-15 md:size-20 text-primary rotate-10 md:-right-6 -right-1" />
+          <Crown className="absolute -top-10 md:-top-8 size-15 md:size-20 text-primary rotate-10 md:-right-6 -right-1" />
 
           <button
             type="button"

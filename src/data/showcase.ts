@@ -11,19 +11,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Astrocheck",
+    title: "Solearn",
     description:
-      "Sistem manajemen buku tamu perpustakaan Astrolitera SMKN 1 Cibinong yang membantu pustakawan mencatat, memantau, dan merekap data pengunjung secara digital. Dilengkapi dengan dashboard admin yang intuitif untuk memudahkan pengelolaan dan pelaporan aktivitas perpustakaan.",
-    stack: [
-      "Next.js",
-      "Tailwind",
-      "Recharts",
-      "React Hook Form",
-      "Sweet Alert 2",
-      "Supabase",
-    ],
-    image: "/projects/Astrocheck.png",
-    preview: "",
+      "Sebuah website landing page dari sebuah aplikasi ai mobile based bernama solearnai.",
+    stack: ["Next.js", "Shadcn", "Motion", "Axios"],
+    image: "/projects/solearn.png",
+    preview: "https://solearnai.com/",
     github: "",
   },
   {
@@ -31,13 +24,23 @@ export const projects: Project[] = [
     title: "Solera",
     description:
       "Platform e-commerce khusus kantin sekolah yang memudahkan siswa dan guru memesan makanan serta minuman langsung dari perangkat mereka. Dirancang dengan antarmuka sederhana dan sistem transaksi yang efisien untuk mempercepat aktivitas kantin sehari-hari.",
-    stack: ["Next.js", "ShadCn", "Tailwind", "Sweet Alert 2", "MySQL"],
+    stack: ["Next.js", "Shadcn", "Tailwind", "Tanstack Query"],
     image: "/projects/solera.png",
     preview: "https://solera.id",
-    github: "https://github.com/username/solera",
+    github: "",
   },
   {
     id: 3,
+    title: "Giunco",
+    description:
+      "Website yang berisi catalog produk dengan brand parfume bernama giunco.",
+    stack: ["Laravel", "Tailwind", "GSAP"],
+    image: "/projects/giunco.png",
+    preview: "https://giunco.id",
+    github: "",
+  },
+  {
+    id: 4,
     title: "Ezwan Ibnu Yassar Portfolio",
     description:
       "Sebuah website portofolio kreatif milik Ezwan Ibnu Yassar, Frontend Developer dengan fokus pada desain interaktif, animasi dinamis, serta pengalaman pengguna yang halus dan intuitif.",
@@ -46,30 +49,23 @@ export const projects: Project[] = [
     preview: "https://portofolio-ms8x.vercel.app/",
     github: "https://github.com/Neyrrs/Portofolio",
   },
+
   {
-    id: 4,
-    title: "Anteiku Caffee",
+    id: 5,
+    title: "Astrocheck",
     description:
-      "Sebuah website profil fiksi yang berasal dari anime Tokyo Ghoul, Aku bertugas sebagai Frontend Developer dengan fokus pengalaman pengguna yang halus dan intuitif.",
-    stack: ["React.js", "Tailwind"],
-    image: "/projects/Anteiku.png",
+      "Sistem manajemen buku tamu perpustakaan Astrolitera SMKN 1 Cibinong yang membantu pustakawan mencatat, memantau, dan merekap data pengunjung secara digital. Dilengkapi dengan dashboard admin yang intuitif untuk memudahkan pengelolaan dan pelaporan aktivitas perpustakaan.",
+    stack: ["Next.js", "Tailwind", "Recharts", "React Hook Form"],
+    image: "/projects/Astrocheck.png",
     preview: "",
     github: "",
   },
-  {
-    id: 5,
-    title: "Learnify",
-    description: "Aplikasi desktop untuk memanajemen sistem booking online",
-    stack: ["C#", "MySQL"],
-    image: "/projects/Learnify.png",
-    preview: "",
-    github: "https://github.com/username/learnify",
-  },
+
   {
     id: 6,
-    title: "Fatality Report",
+    title: "Website OSIS",
     description: "Aplikasi desktop untuk memanajemen sistem booking online",
-    stack: ["React.js", "Framer Motion", "GSAP"],
+    stack: ["Next.js", "Motion", "Tanstack Query", "Axios"],
     image: "/projects/Fatality-report.jpeg",
     preview: "",
     github: "https://github.com/Neyrrs/Learnify",

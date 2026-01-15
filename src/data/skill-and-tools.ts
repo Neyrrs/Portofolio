@@ -13,7 +13,7 @@ export const techStack: SkillItem[] = [
   { name: "Tailwind CSS", icon: "/icons/tailwind.png" },
   { name: "GSAP", icon: "/icons/gsap.png" },
   { name: "Zustand", icon: "/icons/zustand.png" },
-  { name: "React Query", icon: "/icons/reactquery.png" },
+  { name: "Tanstack Query", icon: "/icons/reactquery.png" },
   { name: "Node.js", icon: "/icons/nodejs.png" },
   { name: "Figma", icon: "/icons/figma.png" },
 ];
