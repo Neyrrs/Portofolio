@@ -11,8 +11,7 @@ export const techStack: SkillItem[] = [
   { name: "React", icon: "/icons/react.png" },
   { name: "Next.js", icon: "/icons/nextjs.png" },
   { name: "Tailwind CSS", icon: "/icons/tailwind.png" },
-  { name: "GSAP", icon: "/icons/gsap.png" },
-  { name: "Zustand", icon: "/icons/zustand.png" },
+  { name: "Frammer", icon: "/icons/frammer.png" },
   { name: "Tanstack Query", icon: "/icons/reactquery.png" },
   { name: "Node.js", icon: "/icons/nodejs.png" },
   { name: "Figma", icon: "/icons/figma.png" },
@@ -20,6 +19,7 @@ export const techStack: SkillItem[] = [
 
 export const otherSkills: SkillItem[] = [
   { name: "Express", icon: "/icons/express.png" },
+  { name: "NestJS", icon: "/icons/nestjs.png" },
   { name: "PHP", icon: "/icons/php.png" },
   { name: "C#", icon: "/icons/cs.png" },
   { name: "GDscript", icon: "/icons/gdscript.png" },
@@ -27,6 +27,5 @@ export const otherSkills: SkillItem[] = [
   { name: "MongoDB", icon: "/icons/mongodb.png" },
   { name: "PostgreSQL", icon: "/icons/postgresql.png" },
   { name: "MySQL", icon: "/icons/mysql.png" },
-  { name: "Dart", icon: "/icons/dart.png" },
   { name: "Java", icon: "/icons/java.png" },
 ];
