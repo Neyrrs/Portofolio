@@ -14,7 +14,7 @@ import CertificatesSection from "./_sections/certificate";
 const page = () => {
   return (
     <div className="">
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroPage />
       <Journey />
       <BootcampTrainingJourney />

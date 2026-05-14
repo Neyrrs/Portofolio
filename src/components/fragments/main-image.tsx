@@ -45,11 +45,11 @@ const MainImage = () => {
     <div ref={containerRef} className="relative inline-block cursor-target">
       <Image
         alt="main-image"
-        src={"/images/me2.png"}
+        src={"/images/hero-image.jpeg"}
         width={800}
         height={450}
         quality={100}
-        className="w-110 h-104 object-cover shadow-md border-primary border-4 hover:shadow-2xl hover:scale-102 rounded-full duration-300 transition-all"
+        className="w-110 h-104 object-cover shadow-md border-primary border-4 hover:shadow-2xl hover:scale-102 duration-300 rounded-full transition-all"
       />
       <span
         ref={spanRef}

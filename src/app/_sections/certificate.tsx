@@ -38,16 +38,29 @@ const certificates: Certificate[] = [
     logo: "/icons/idn.png",
   },
   {
-    id: "clevio",
-    title: "Clevio game Development",
-    issuer: "Clevio",
-    date: "2025-06-18",
-    image: "/certificates/clevio.png",
-    logo: "/icons/clevio.png",
+    id: "pkl",
+    title: "Intern",
+    issuer: "PT. Alus Astech",
+    date: "2025-09-29",
+    image: "/certificates/alustech.png",
+    logo: "/icons/alus.png",
+  },
+  {
+    id: "ketos",
+    title: "Ketua Umum OSIS",
+    issuer: "SMKN 1 Cibinong",
+    date: "2025-2026",
+    image: "/certificates/ketos.png",
+    logo: "/icons/OSIS.PNG",
   },
 ];
 
-const spring = { type: "spring", stiffness: 160, damping: 22, mass: 0.7 } as const;
+const spring = {
+  type: "spring",
+  stiffness: 160,
+  damping: 22,
+  mass: 0.7,
+} as const;
 const container = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.06 } },
@@ -115,12 +128,21 @@ export default function CertificatesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="certificate" className="relative w-full text-foreground py-14">
+    <section
+      ref={sectionRef}
+      id="certificate"
+      className="relative w-full text-foreground py-14"
+    >
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center md:text-left">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight"> <span className="text-yellow-500">{"<"}</span> Certificates <span className="text-yellow-500">{"/>"}</span></h2>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+            {" "}
+            <span className="text-yellow-500">{"<"}</span> Certificates{" "}
+            <span className="text-yellow-500">{"/>"}</span>
+          </h2>
           <p className="text-sm md:text-base text-muted-foreground mt-2 ">
-            Beberapa sertifikat yang saya peroleh dari pelatihan dan program profesional.
+            Beberapa sertifikat yang saya peroleh dari pelatihan dan program
+            profesional.
           </p>
         </div>
 

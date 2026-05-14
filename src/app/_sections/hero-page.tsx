@@ -32,7 +32,7 @@ const HeroPage = () => {
           y: 40,
           duration: 1,
         },
-        "-=0.5"
+        "-=0.5",
       );
     }, heroRef);
 
@@ -40,7 +40,7 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <div id='about' className="hero-image">
+    <div id="about" className="hero-image">
       <div className="md:block hidden">
         <TargetCursor spinDuration={2} hideDefaultCursor />
       </div>
@@ -58,7 +58,7 @@ const HeroPage = () => {
             </h1>
 
             <SplitText
-              text="I'm Wan, a passionate Frontend Developer focused on building elegant, scalable web applications. love turning complex problems into solution."
+              text="Saya Wan, seorang Software Engineer yang suka membangun aplikasi web dan solusi digital — mulai dari ide hingga deployment, mengubah permasalahan kompleks menjadi kode yang bersih dan scalable."
               className="hero-text text-base md:text-lg text-secondary-foreground w-[95%]"
               delay={100}
               duration={0.8}

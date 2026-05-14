@@ -12,21 +12,21 @@ const education = [
     year: "2020 - 2022",
     title: "SMPN 1 Ciawi",
     description:
-      "Mulai mendalami pelajaran eksakta dan sosial serta aktif dalam berbagai kegiatan ekstrakurikuler yang membangun karakter.",
+      "Started exploring sciences and social studies while actively participating in extracurricular activities that shaped my character and curiosity.",
     logo: "/schools/SMPN1CIAWI.png",
   },
   {
     year: "2022 - 2023",
     title: "SMPN 3 Cibinong",
     description:
-      "Mulai mendalami pelajaran eksakta dan sosial serta aktif dalam berbagai kegiatan ekstrakurikuler yang membangun karakter.",
+      "Continued building foundational knowledge across subjects while exploring team-based activities that strengthened discipline and collaboration.",
     logo: "/schools/SMPN3CIBINONG.png",
   },
   {
     year: "2023 - 2026",
     title: "SMKN 1 Cibinong",
     description:
-      "Saat ini menempuh pendidikan di jurusan Pengembangan Perangkat Lunak dan Gim, fokus pada pengembangan web dan aplikasi mobile.",
+      "Currently studying Software & Game Development, with a strong focus on web development, software engineering, and building real-world applications.",
     logo: "/schools/SMKN1CIBINONG.png",
   },
 ];
@@ -65,7 +65,7 @@ const Journey = () => {
       >
         <h2 className="text-2xl md:text-5xl font-bold">Education Journey</h2>
         <p className="text-primary mt-2 md:mt-3 text-sm md:text-base">
-          Jejak perjalanan pendidikan yang membentuk dasar dan karakter saya.
+          The path that shaped who I am as a developer and thinker.
         </p>
       </div>
       <div className="relative w-3/4 border-l-2 border-foreground/40 ml-6 md:ml-10">

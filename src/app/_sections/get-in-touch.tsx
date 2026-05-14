@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Mail, Instagram, Linkedin, Github } from "lucide-react";
+import { Mail, Instagram, Linkedin, Github, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Variants } from "framer-motion";
 
@@ -43,7 +43,7 @@ const GetInTouch: React.FC = () => {
           duration: 1.2,
           ease: "power3.out",
         },
-        "-=0.5"
+        "-=0.5",
       );
     }, sectionRef);
 
@@ -79,8 +79,8 @@ const GetInTouch: React.FC = () => {
             and Build Something Great!
           </h1>
           <p className="text-muted-foreground text-sm md:text-lg mb-8 max-w-md">
-            Feel free to reach out to me through any platform below — whether
-            it’s about collaboration, projects, or just saying hello!
+            Jangan ragu untuk menghubungi saya melalui platform di bawah ini —
+            baik untuk kolaborasi, membahas proyek, atau sekadar menyapa!
           </p>
           <motion.div
             initial="hidden"
@@ -125,13 +125,28 @@ const GetInTouch: React.FC = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className={`rounded-full p-3 transition-all duration-300 ${link.color}`}
+                  className={`rounded-full p-3 cursor-target transition-all duration-300 ${link.color}`}
                 >
                   {link.icon}
                 </Button>
               </motion.a>
             ))}
           </motion.div>
+
+          <motion.a
+            href="/docs/CV-EZWAN.pdf"
+            download
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="mt-8 inline-flex cursor-target items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm shadow-lg w-fit cursor-pointer"
+          >
+            <Download size={16} />
+            Download CV
+          </motion.a>
         </div>
 
         <motion.div
@@ -142,7 +157,7 @@ const GetInTouch: React.FC = () => {
         >
           <Image
             alt="Get in Touch"
-            src="/images/hirohito.png"
+            src="/images/me.JPG"
             fill
             className="object-cover rounded-xl md:rounded-bl-xl shadow-xl"
           />

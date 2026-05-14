@@ -24,7 +24,7 @@ export default function ShowcaseSection() {
         const anim = gsap.fromTo(
           el,
           { opacity: 0, x: isLeft ? -80 : 80 },
-          { opacity: 1, x: 0, duration: 1, ease: "power3.out", paused: true }
+          { opacity: 1, x: 0, duration: 1, ease: "power3.out", paused: true },
         );
 
         ScrollTrigger.create({
@@ -72,15 +72,16 @@ export default function ShowcaseSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Koleksi proyek yang menampilkan kreativitas dan performa tinggi
-            dalam pengembangan web modern.
+            Kumpulan proyek yang telah saya bangun & kembangkan.
           </motion.p>
         </div>
 
         <div className="container mx-auto md:space-y-28 space-y-20">
           {projects.map((project, index) => {
             const isLeft = index % 2 === 0;
-            const hasPreview = Boolean(project.preview && project.preview.trim());
+            const hasPreview = Boolean(
+              project.preview && project.preview.trim(),
+            );
             const hasGithub = Boolean(project.github && project.github.trim());
 
             return (
@@ -133,7 +134,11 @@ export default function ShowcaseSection() {
                         </Link>
                       </Button>
                     ) : (
-                      <Button disabled variant="secondary" className="opacity-70">
+                      <Button
+                        disabled
+                        variant="secondary"
+                        className="opacity-70"
+                      >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Preview belum tersedia
                       </Button>
@@ -172,8 +177,12 @@ export default function ShowcaseSection() {
                   </div>
 
                   <p className="mt-2 text-xs text-muted-foreground">
-                    {hasPreview ? "Preview aktif" : "Website belum bisa diakses"}
-                    {hasGithub ? " • Repository tersedia" : " • Repository tidak tersedia"}
+                    {hasPreview
+                      ? "Preview aktif"
+                      : "Website belum bisa diakses"}
+                    {hasGithub
+                      ? " • Repository tersedia"
+                      : " • Repository tidak tersedia"}
                   </p>
                 </div>
               </div>
