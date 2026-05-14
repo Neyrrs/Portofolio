@@ -1,4 +1,4 @@
-import Navbar from "@/components/fragments/navbar";
+// import Navbar from "@/components/fragments/navbar";
 import React from "react";
 import HeroPage from "./_sections/hero-page";
 import Journey from "./_sections/journey";
