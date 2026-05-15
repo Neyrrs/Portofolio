@@ -157,7 +157,7 @@ const GetInTouch: React.FC = () => {
         >
           <Image
             alt="Get in Touch"
-            src="/images/me.JPG"
+            src="/images/me.jpg"
             fill
             className="object-cover rounded-xl md:rounded-bl-xl shadow-xl"
           />
