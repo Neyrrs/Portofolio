@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -39,7 +46,7 @@ const certificates: Certificate[] = [
   },
   {
     id: "pkl",
-    title: "Intern",
+    title: "Internship/PKL",
     issuer: "PT. Alus Astech",
     date: "2025-09-29",
     image: "/certificates/alustech.png",
@@ -72,35 +79,61 @@ const item = {
 
 function CertificateCard({ c }: { c: Certificate }) {
   return (
-    <motion.div layout variants={item} transition={spring}>
-      <Card className="overflow-hidden rounded-lg border bg-card/80 p-0 backdrop-blur-sm shadow-md">
-        <div className="relative aspect-video w-full overflow-hidden">
+    <Dialog>
+      <DialogTrigger asChild>
+        <motion.div layout variants={item} transition={spring}>
+          <Card className="cursor-pointer overflow-hidden rounded-lg border bg-card/80 p-0 backdrop-blur-sm shadow-md transition-all hover:ring-2 hover:ring-primary/50">
+            <div className="relative aspect-video w-full overflow-hidden group">
+              <Image
+                src={c.image}
+                alt={c.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent opacity-100 flex flex-col justify-end p-4">
+                <h3 className="text-base md:text-lg font-semibold text-foreground drop-shadow-sm">
+                  {c.title}
+                </h3>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  {c.logo && (
+                    <Image
+                      src={c.logo}
+                      alt={c.issuer}
+                      width={16}
+                      height={16}
+                      className="object-contain rounded"
+                    />
+                  )}
+                  <span>{c.issuer}</span>•<span>{c.date}</span>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+      </DialogTrigger>
+      <DialogContent className="max-w-2xl overflow-hidden border-none">
+        <DialogHeader className="sr-only">
+          <DialogTitle>{c.title}</DialogTitle>
+        </DialogHeader>
+        <div className="relative w-full overflow-hidden rounded-sm">
           <Image
             src={c.image}
             alt={c.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            width={800}
+            height={450}
+            quality={100}
+            className="object-contain"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent opacity-100 flex flex-col justify-end p-4">
-            <h3 className="text-base md:text-lg font-semibold text-foreground drop-shadow-sm">
-              {c.title}
-            </h3>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              {c.logo && (
-                <Image
-                  src={c.logo}
-                  alt={c.issuer}
-                  width={16}
-                  height={16}
-                  className="object-contain rounded"
-                />
-              )}
-              <span>{c.issuer}</span>•<span>{c.date}</span>
-            </div>
-          </div>
         </div>
-      </Card>
-    </motion.div>
+        <div className="pt-4 flex items-center gap-2 bg-background/80 backdrop-blur-md border-t">
+          <h3 className="text-lg font-semibold">{c.title}</h3> -
+          <p className="text-muted-foreground">
+            {c.issuer} • {c.date}
+          </p>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }
 
