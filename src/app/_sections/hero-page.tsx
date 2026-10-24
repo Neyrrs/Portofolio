@@ -51,14 +51,14 @@ const HeroPage = () => {
         <div className="flex flex-col justify-center gap-8 md:w-1/2 w-full">
           <div className="flex flex-col gap-2 md:gap-4">
             <h1 className="hero-text text-4xl md:text-6xl font-bold leading-tight text-foreground">
-              Meet me, person loves to{" "}
+              Meet me, a tech enthusiast who loves to{" "}
               <span className="cursor-target px-2 transition-all text-primary hover:bg-primary hover:text-white">
-                CODE
+                EXPLORE
               </span>
             </h1>
 
             <SplitText
-              text="Saya Wan, seorang Software Engineer yang suka membangun aplikasi web dan solusi digital — mulai dari ide hingga deployment, mengubah permasalahan kompleks menjadi kode yang bersih dan scalable."
+              text="I'm Wan, a System Engineer who focuses on automation and software solutions — particularly Red Hat Ansible Automation Platform and Redis Enterprise — while capable of building applications and digital solutions."
               className="hero-text text-base md:text-lg text-secondary-foreground w-[95%]"
               delay={100}
               duration={0.8}

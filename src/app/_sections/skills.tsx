@@ -77,10 +77,9 @@ const Skills: React.FC = () => {
                 problem-solving is the skill.
               </h3>
               <p className="text-base md:text-lg font-medium text-foreground/80 mt-2 md:mt-4">
-                Bekerja di berbagai bidang full stack — web, backend, database,
-                dan lainnya. Menggunakan JavaScript, Typescript, PHP, C#, maupun
-                SQL, mampu beradaptasi dengan kebutuhan proyek dan fokus
-                membangun solusi yang benar-benar berjalan dengan baik.
+                Bekerja di berbagai bidang — full stack web, backend, database, hingga system
+                engineering. Adaptif terhadap kebutuhan proyek dan fokus membangun
+                solusi yang benar-benar berjalan dengan baik.
               </p>
             </div>
           </div>

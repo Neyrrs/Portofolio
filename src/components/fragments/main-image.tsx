@@ -45,7 +45,7 @@ const MainImage = () => {
     <div ref={containerRef} className="relative inline-block cursor-target">
       <Image
         alt="main-image"
-        src={"/images/hero-image.jpeg"}
+        src={"/images/hero-image.png"}
         width={800}
         height={450}
         quality={100}
