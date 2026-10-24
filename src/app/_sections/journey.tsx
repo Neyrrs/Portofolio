@@ -166,7 +166,7 @@ const Journey = () => {
       >
         <h2 className="text-2xl md:text-5xl font-bold">Journey</h2>
         <p className="text-primary mt-2 md:mt-3 text-sm md:text-base">
-          The path that shaped who I am as a developer and thinker.
+          The path that shaped who I am as a developer and system engineer.
         </p>
       </div>
       <div className="mt-16 md:mt-24 grid md:grid-cols-2 gap-10">
